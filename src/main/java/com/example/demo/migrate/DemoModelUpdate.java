@@ -2,14 +2,15 @@ package com.example.demo.migrate;
 
 import com.example.demo.model.DemoModel;
 import com.example.demo.repositories.DemoModelRepository;
-import io.mongock.api.annotations.*;
+import com.github.cloudyrock.mongock.ChangeLog;
+import com.github.cloudyrock.mongock.ChangeSet;
 
 import java.util.List;
 
-@ChangeUnit(id = "demo-2", order = "002", author = "mongock")
+@ChangeLog
 public class DemoModelUpdate {
 
-    @Execution
+    @ChangeSet(id = "demo-2", order = "002", author = "mongock")
     public void execution(DemoModelRepository demoModelRepository) {
         List<DemoModel> demoModels = demoModelRepository.findAll();
         for (int i = 0; i < demoModels.size(); i++) {
@@ -18,9 +19,5 @@ public class DemoModelUpdate {
         demoModelRepository.saveAll(demoModels);
     }
 
-    @RollbackExecution
-    public void rollbackExecution(DemoModelRepository demoModelRepository) {
-//        demoModelRepository.deleteAll();
-    }
 
 }
