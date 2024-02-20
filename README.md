@@ -10,7 +10,7 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.18)
 
-2024-02-20 11:58:45.695  INFO 26164 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 17.0.10 on RBAUL02 with PID 26164 (C:\github\experements\mongock-demo\build\libs\mongock-spring-boot-demo-0.0.1-SNAPSHOT.jar started by rbaul in C:\github\experements\mongock-demo)
+2024-02-20 11:58:45.695  INFO 26164 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 17.0.10 on RBAUL02 with PID 26164
 2024-02-20 11:58:45.698  INFO 26164 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
 2024-02-20 11:58:46.361  INFO 26164 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
 2024-02-20 11:58:46.430  INFO 26164 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 MongoDB repository interfaces.
