@@ -1,9 +1,8 @@
 buildscript {
 	ext {
-//		set('mongockBomVersion', '5.2.2')
-		set('mongockBomVersion', '5.4.0')
-		set('springBootVersion', '3.2.2')
-//		set('springBootVersion', '2.7.18')
+		set('mongockBomVersion', '5.2.2')
+//		set('mongockBomVersion', '5.4.0')
+		set('springBootVersion', '2.7.18')
 	}
 }
 
@@ -33,13 +32,9 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 
-	// Mongock Spring Boot 3 (2 working also)
-	implementation 'io.mongock:mongock-springboot-v3'
-	implementation 'io.mongock:mongodb-springdata-v4-driver'
-
 	// Mongock Spring Boot 2
-//	implementation 'io.mongock:mongock-springboot'
-//	implementation 'io.mongock:mongodb-springdata-v3-driver'
+	implementation 'io.mongock:mongock-springboot'
+	implementation 'io.mongock:mongodb-springdata-v3-driver'
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
