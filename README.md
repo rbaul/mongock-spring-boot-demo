@@ -1,5 +1,6 @@
 # Mongock Demo with Spring Boot 2 and 3
 
+### From IDEA working
 ```log
 
   .   ____          _            __ _ _
@@ -60,3 +61,53 @@
 2024-02-22 13:10:40.679  INFO 26936 --- [           main] i.m.r.c.e.o.migrate.MigrateExecutorBase  : Mongock has finished
 ```
 
+### From JAR not working
+```log
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2024-02-22 14:31:07.630  INFO 23708 --- [           main] com.example.demo.DemoApplication         : Starting DemoApplication using Java 17.0.10 on RBAUL02 with PID 23708 (C:\github\experements\mongock-demo\build\libs\mongock-spring-boot-demo-0.0.1-SNAPSHOT.jar started by rbaul in C:\github\experements\mongock-demo)
+2024-02-22 14:31:07.635  INFO 23708 --- [           main] com.example.demo.DemoApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-02-22 14:31:08.463  INFO 23708 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.2024-02-22 14:31:08.545  INFO 23708 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 1 MongoDB repository interfaces.
+2024-02-22 14:31:09.191  INFO 23708 --- [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/IBM Corporation/17.0.10+7"} created with settings MongoClientSettings{readPreference=primary
+, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCo
+decProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@1ec39ec0]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionT
+imeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConne
+ctionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=
+JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2024-02-22 14:31:09.219  INFO 23708 --- [localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:132}] to localhost:27017
+2024-02-22 14:31:09.219  INFO 23708 --- [localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:131}] to localhost:27017
+2024-02-22 14:31:09.219  INFO 23708 --- [localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=37704828}
+2024-02-22 14:31:09.665  INFO 23708 --- [           main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:133}] to localhost:27017
+2024-02-22 14:31:10.187  INFO 23708 --- [           main] i.m.r.core.builder.RunnerBuilderBase     : Mongock runner COMMUNITY version[5.2.2]
+2024-02-22 14:31:10.188  INFO 23708 --- [           main] i.m.r.core.builder.RunnerBuilderBase     : Running Mongock with NO metadata
+2024-02-22 14:31:10.189  WARN 23708 --- [           main] i.m.r.core.builder.RunnerBuilderBase     : Property transaction-enabled not provided. It will become true as default in next versions. Set explicit value to false in case transaction are not desired.
+2024-02-22 14:31:10.189  WARN 23708 --- [           main] i.m.r.core.builder.RunnerBuilderBase     : Property transaction-enabled not provided and is unknown if driver is transactionable. BY DEFAULT MONGOCK WILL RUN IN NO-TRANSACTION MODE.
+2024-02-22 14:31:10.454  INFO 23708 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 3.49 seconds (JVM running for 4.069)
+2024-02-22 14:31:10.543  INFO 23708 --- [           main] org.reflections.Reflections              : Reflections took 64 ms to scan 1 urls, producing 2 keys and 2 values
+2024-02-22 14:31:10.557  INFO 23708 --- [           main] org.reflections.Reflections              : Reflections took 8 ms to scan 1 urls, producing 2 keys and 2 values
+2024-02-22 14:31:10.585  INFO 23708 --- [           main] i.m.driver.core.lock.LockManagerDefault  : Mongock trying to acquire the lock
+2024-02-22 14:31:10.622  INFO 23708 --- [           main] i.m.driver.core.lock.LockManagerDefault  : Mongock acquired the lock until: Thu Feb 22 14:32:10 IST 2024
+2024-02-22 14:31:10.630  INFO 23708 --- [       Thread-2] i.m.driver.core.lock.LockManagerDefault  : Starting mongock lock daemon...
+2024-02-22 14:31:10.632  INFO 23708 --- [           main] i.m.r.c.e.system.SystemUpdateExecutor    : Mongock starting the system update execution id[2024-02-22T14:31:10.186854500-511]...
+2024-02-22 14:31:10.634  INFO 23708 --- [       Thread-2] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:134}] to localhost:27017
+2024-02-22 14:31:10.638  INFO 23708 --- [           main] i.m.r.c.executor.ChangeLogRuntimeImpl    : method[io.mongock.runner.core.executor.system.changes.SystemChangeUnit00001] with arguments: []
+2024-02-22 14:31:10.641  INFO 23708 --- [           main] i.m.r.c.executor.ChangeLogRuntimeImpl    : method[beforeExecution] with arguments: [io.mongock.driver.mongodb.springdata.v3.SpringDataMongoV3ChangeEntryRepository]
+2024-02-22 14:31:10.642  INFO 23708 --- [           main] i.m.r.core.executor.ChangeExecutorBase   : APPLIED - {"id"="system-change-00001_before", "type"="before-execution", "author"="mongock", "class"="SystemChangeUnit00001", "method"="beforeExecution"}
+2024-02-22 14:31:10.650  INFO 23708 --- [           main] i.m.r.c.executor.ChangeLogRuntimeImpl    : method[execution] with arguments: [io.mongock.driver.mongodb.springdata.v3.SpringDataMongoV3ChangeEntryRepository]
+2024-02-22 14:31:10.653  INFO 23708 --- [           main] i.m.r.core.executor.ChangeExecutorBase   : APPLIED - {"id"="system-change-00001", "type"="execution", "author"="mongock", "class"="SystemChangeUnit00001", "method"="execution"}
+2024-02-22 14:31:10.658  INFO 23708 --- [           main] i.m.driver.core.lock.LockManagerDefault  : Mongock waiting to release the lock
+2024-02-22 14:31:10.659  INFO 23708 --- [           main] i.m.driver.core.lock.LockManagerDefault  : Mongock releasing the lock
+2024-02-22 14:31:10.664  INFO 23708 --- [           main] i.m.driver.core.lock.LockManagerDefault  : Mongock released the lock
+2024-02-22 14:31:10.665  INFO 23708 --- [           main] i.m.r.c.e.system.SystemUpdateExecutor    : Mongock has finished the system update execution
+2024-02-22 14:31:10.948  INFO 23708 --- [           main] org.reflections.Reflections              : Reflections took 282 ms to scan 1 urls, producing 0 keys and 0 values
+2024-02-22 14:31:11.230  INFO 23708 --- [           main] org.reflections.Reflections              : Reflections took 281 ms to scan 1 urls, producing 0 keys and 0 values
+2024-02-22 14:31:11.230  INFO 23708 --- [           main] i.m.r.c.e.o.migrate.MigrateExecutorBase  : Mongock skipping the data migration. There is no change set item.
+2024-02-22 14:31:11.230  INFO 23708 --- [           main] i.m.r.c.e.o.migrate.MigrateExecutorBase  : Mongock has finished
+```
