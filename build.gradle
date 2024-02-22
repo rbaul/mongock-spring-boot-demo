@@ -36,6 +36,9 @@ dependencies {
 	implementation 'io.mongock:mongock-springboot'
 	implementation 'io.mongock:mongodb-springdata-v3-driver'
 
+	implementation 'org.reflections:reflections:0.10.2'
+
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
